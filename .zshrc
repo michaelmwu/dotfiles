@@ -105,13 +105,19 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+setopt inc_append_history
+setopt share_history
+
 export NVM_DIR=~/.nvm
-. $(brew --prefix nvm)/nvm.sh
 
 export GOPATH="${HOME}/.go"
 export GOROOT="$(brew --prefix golang)/libexec"
-export PATH="/usr/local/bin:$HOME/src/gem/bin:/usr/local/share/python:$PATH:$HOME/bin:${GOPATH}/bin:${GOROOT}/bin:$HOME/arcanist/arcanist/bin"
+export PATH="$HOME/src/gem/bin:/usr/local/bin:$HOME/src/gem/bin:/usr/local/share/python:$PATH:$HOME/bin:${GOPATH}/bin:${GOROOT}/bin:$HOME/arcanist/arcanist/bin"
 export WORKON_HOME=~/Envs
 source /usr/local/bin/virtualenvwrapper.sh
 
 alias config='/usr/bin/git --git-dir=/Users/michaelmwu/.cfg/ --work-tree=/Users/michaelmwu'
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
