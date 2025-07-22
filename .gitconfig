@@ -8,10 +8,10 @@
 	newbranch = "!f() { git checkout -b michaelmwu/$1; }; f"
 [user]
         name = Michael Wu
-        email = michaelmwu@dropbox.com
+        email = michaelmwu@gmail.com
 [core]
         editor = nano
-        excludesfile = /Users/michaelmwu/.gitignore_global
+        excludesfile = /Users/michaelwu/.gitignore_global
 [difftool "sourcetree"]
         cmd = opendiff \"$LOCAL\" \"$REMOTE\"
         path =
