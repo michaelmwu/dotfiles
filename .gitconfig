@@ -5,6 +5,7 @@
         st = status
         unstage = reset HEAD --
         last = log -1 HEAD
+	newbranch = "!f() { git checkout -b michaelmwu/$1; }; f"
 [user]
         name = Michael Wu
         email = michaelmwu@dropbox.com
@@ -18,4 +19,6 @@
         cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
         trustExitCode = true
 [help]
-        autocorrect = 1
+	autocorrect = 15
+[push]
+	autoSetupRemote = true

@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/michaelmwu/.oh-my-zsh"
+export ZSH="/Users/michaelwu/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -63,7 +63,7 @@ ZSH_THEME="robbyrussell"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  git virtualenvwrapper git-flow
+  git virtualenv git-flow
 )
 
 if type brew &>/dev/null; then
@@ -110,13 +110,9 @@ setopt share_history
 
 export NVM_DIR=~/.nvm
 
-export GOPATH="${HOME}/.go"
-export GOROOT="$(brew --prefix golang)/libexec"
-export PATH="$HOME/src/gem/bin:/usr/local/bin:$HOME/src/gem/bin:/usr/local/share/python:$PATH:$HOME/bin:${GOPATH}/bin:${GOROOT}/bin:$HOME/arcanist/arcanist/bin"
-export WORKON_HOME=~/Envs
-source /usr/local/bin/virtualenvwrapper.sh
+export PATH="$HOME/src/gem/bin:/usr/local/bin:$PATH:$HOME/bin"
 
-alias config='/usr/bin/git --git-dir=/Users/michaelmwu/.cfg/ --work-tree=/Users/michaelmwu'
+alias config='/usr/bin/git --git-dir=/Users/michaelwu/.cfg/ --work-tree=/Users/michaelwu'
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 export NVM_DIR="$HOME/.nvm"
